@@ -13,6 +13,7 @@
 *
 **/
 package tongbu.nattadol.lab2;
+
 public class Footballer {
     public static void main(String[] args) {
         if (args.length == 3) {
