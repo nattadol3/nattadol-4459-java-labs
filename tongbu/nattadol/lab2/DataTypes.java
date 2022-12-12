@@ -17,17 +17,15 @@ public class DataTypes {
         String studentID = "6530404459";
         char theFirstLetterOfYourFirstName = your_name.charAt(0);
         boolean value = true;
-        String myIdInOctal = "73";
-        int theLastTwoDigitsOfMyIDNumberFromOctal = Integer.parseInt(myIdInOctal,8);
-        String myIdInHexa = "3b";
-        int theLastTwoDigitsOfMyIDNumberFromHexa = Integer.parseInt(myIdInHexa,16);
+        int myIdInOctal = 073;
+        int myIdInHexa = 0x3b;
         long myIdInLong = 59;
         float lastTwoDigitsWithFirstTwoDigits = 59.65F;
         double lastTwoDigitsWithCurrentYear = 59.22;
 
         System.out.println("My name is " + your_name);
         System.out.println("My student ID was " + studentID);
-        System.out.println(theFirstLetterOfYourFirstName + " " + value + " " + theLastTwoDigitsOfMyIDNumberFromOctal + " " + theLastTwoDigitsOfMyIDNumberFromHexa);
+        System.out.println(theFirstLetterOfYourFirstName + " " + value + " " + myIdInOctal + " " + myIdInHexa);
         System.out.println(myIdInLong + " " + lastTwoDigitsWithFirstTwoDigits + " " + lastTwoDigitsWithCurrentYear);
     }
 }
