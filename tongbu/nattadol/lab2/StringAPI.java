@@ -11,16 +11,18 @@
 * Date: December 11, 2022
 *
 **/
+
 package tongbu.nattadol.lab2;
+
 public class StringAPI {
     public static void main(String[] args) {
         String schoolName = args[0];
-        String uni = "university";
-        String coll = "college";
-        if (schoolName.toLowerCase().contains(uni)) {
+        String university = "university";
+        String college = "college";
+        if (schoolName.toLowerCase().contains(university)) {
             System.out.println(schoolName + " is a university");
         }
-        else if (schoolName.toLowerCase().contains(coll)) {
+        else if (schoolName.toLowerCase().contains(college)) {
             System.out.println(schoolName + " is a college");
         }
         else {

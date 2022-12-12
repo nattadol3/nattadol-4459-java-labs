@@ -1,13 +1,13 @@
-    /**
-     * This program declare several variables with different datatypes.  Then output
-     * those variables to the screen to help understanding how each of the datatypes
-     * work. 
-     * 
-     * Author : Nattadol Tongbu
-     * ID : 653040445-9
-     * sec : 2
-     * Date : December 10, 2022
-     */
+/**
+* This program declare several variables with different datatypes.  Then output
+* those variables to the screen to help understanding how each of the datatypes
+* work. 
+* 
+* Author : Nattadol Tongbu
+* ID : 653040445-9
+* sec : 2
+* Date : December 10, 2022
+*/
 
 package tongbu.nattadol.lab2;
 

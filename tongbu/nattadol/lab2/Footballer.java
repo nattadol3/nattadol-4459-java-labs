@@ -12,6 +12,7 @@
 * Date: December 9, 2022
 *
 **/
+
 package tongbu.nattadol.lab2;
 
 public class Footballer {
