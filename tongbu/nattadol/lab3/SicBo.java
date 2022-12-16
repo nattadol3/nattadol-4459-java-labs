@@ -36,9 +36,9 @@ public class SicBo {
         if (input.equals("1")) {
             System.out.print("Type in h for high and l for low: ");
             String highLow = reader.nextLine(); // Read if user guess high or low.
-            System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
-            System.out.println("Total is " + total);
             if (highLow.equalsIgnoreCase("h")) {
+                System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
+                System.out.println("Total is " + total);
                 if (total >= 11) {
                     System.out.println("You win 20 Bath.");
                 }
@@ -48,6 +48,8 @@ public class SicBo {
                 }
             }
             else if (highLow.equalsIgnoreCase("l")) {
+                System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
+                System.out.println("Total is " + total);
                 if (total >= 11) {
                     System.out.println("You lose 10 Bath.");
                 }
@@ -64,8 +66,8 @@ public class SicBo {
             System.out.print("Print in a number to bet on (1-6): ");
             String betting = reader.nextLine(); // Read which number the user guess.
             int bettingNumber = Integer.parseInt(betting);
-            System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
-            if (bettingNumber <= 6) {
+            if (bettingNumber <= 6 && bettingNumber >= 1) {
+                System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
                 if (bettingNumber == die1 && bettingNumber == die2 && bettingNumber == die3) {
                     System.out.println("You win 90 Bath.");
                 }
@@ -102,6 +104,6 @@ public class SicBo {
             System.out.println("Incorrect input. Enter 1 or 2 only."); 
             // Error message in case of if user input something other than "1" or "2".
         }
-        reader.close(); // Close the Scanner
+        reader.close(); // Close the Scanner.
     }  
 }
