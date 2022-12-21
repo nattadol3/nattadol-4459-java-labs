@@ -1,7 +1,11 @@
 /**
-* This BasicStat program is used to accept several number inputs from user.  The program will then sort the number in order
+* This BasicStatMethod program work the same as BasicStat program.  It accept number inputs from user, then it will sort the numbers
 * from lowest to highest, find the minimum and maximum value, find the average value and median value, and find standard deviation.
-* then it will display it on the screen.
+* This program has two methods to do it.  The first method is getInput() method.  This method will get the number inputs from user
+* and then return it as a String value store in variable named "input".
+* The second method is calculateStat() method.  This method will take the values from the "input" variable, store it in a String array
+* seperated by space.  Then it will change each String to double type and stores it in a double array.  The method will then sort the
+* number, calulate all the minimum, maximum, average, median, and standard deviation value, then it will display it on the screen.
 * the output format is:
 * "Enter numbers (separated by space): <user_input>
 * Sorted numbers are <sorted_number>
@@ -25,21 +29,32 @@ import java.util.*;
 import java.util.Arrays;
 import java.lang.Math;
 
-public class BasicStat{
+public class BasicStatMethod {
     public static void main(String[] args) {
-        // Create a Scanner and DecimalFormat to use in the program.
+        String input = getInput();
+        calculateStat(input);
+    }
+    
+    public static String getInput() {
+        // Create a Scanner.
         Scanner reader = new Scanner(System.in);
-        DecimalFormat decimalF = new DecimalFormat("0.00");
-
-        // Accept inputs from user.
+        
+        // Accept inputs from user, then return the value in String.
         System.out.print("Enter numbers (separated by space): ");
         String numInput = reader.nextLine();
+        reader.close();
+        return numInput;
+    }
 
+    public static void calculateStat(String numInput) {
+        // Create a DecimalFormat class.  Used to make the output be in two decimals.
+        DecimalFormat decimalF = new DecimalFormat("0.00");
+        
         // Crete a String and Double arrays.  String array is used to store user input in arrays.
-        // Double array is used to store the input after its get change to double type.
+        // Double array is used to store the input after its get change to double type.  
         String[] numInputToStringArray = numInput.split(" ");
         double[] numDoubleArray = new double[numInputToStringArray.length];
-
+        
         // Check if there're no input from user, then display the error message.
         if (numInput.isEmpty()) {
             System.out.println("Please input at least one number.");
@@ -49,7 +64,7 @@ public class BasicStat{
             // save it in Double type array numDoubleArray
             for(int i = 0; i < numInputToStringArray.length; i++) {
             numDoubleArray[i] = Double.parseDouble(numInputToStringArray[i]);
-        }
+            }
             // Sorted the numbers in numDoubleArray.
             System.out.print("Sorted numbers are ");
             Arrays.sort(numDoubleArray);
@@ -101,7 +116,6 @@ public class BasicStat{
             }
             stdDeviation = Math.sqrt((sigmaValue/numDoubleArray.length));
             System.out.println("Standard deviation: " + decimalF.format(stdDeviation));
-        }
-        reader.close();
+        }    
     }
 }
