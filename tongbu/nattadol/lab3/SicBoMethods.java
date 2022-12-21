@@ -19,6 +19,7 @@
 package tongbu.nattadol.lab3;
 
 import java.util.Scanner; // Import Scanner to read the user input.
+import java.util.Random;
 
 public class SicBoMethods {
     static int choice; // Declare variable choice with static so its can be used across the program.
@@ -72,7 +73,7 @@ public class SicBoMethods {
             }
         }
         else if (choice == 2) { 
-            System.out.print("Print in a number to bet on (1-6): ");
+            System.out.print("Type in a number to bet on (1-6): ");
             String betting = reader.next(); // Read which number the user guess.
             int bettingNumber = Integer.parseInt(betting);
             if (bettingNumber <= 6 && bettingNumber >= 1) {

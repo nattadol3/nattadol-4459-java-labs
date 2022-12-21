@@ -20,6 +20,8 @@
 package tongbu.nattadol.lab3;
 
 import java.util.Scanner; // To import Scanner.  It's used to read the arguments that user input.
+import java.util.Random;
+
 public class SicBo {
     public static void main(String[] args) {
         int die1 = 1 + (int)(Math.random() * ((6 - 1) + 1));
@@ -63,7 +65,7 @@ public class SicBo {
             }
         }
         else if (input.equalsIgnoreCase("2")) {
-            System.out.print("Print in a number to bet on (1-6): ");
+            System.out.print("Type in a number to bet on (1-6): ");
             String betting = reader.nextLine(); // Read which number the user guess.
             int bettingNumber = Integer.parseInt(betting);
             if (bettingNumber <= 6 && bettingNumber >= 1) {
