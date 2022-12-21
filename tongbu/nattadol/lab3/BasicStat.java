@@ -24,10 +24,12 @@ import java.text.DecimalFormat;
 import java.util.*;
 import java.util.Arrays;
 import java.lang.Math;
+import java.lang.NumberFormatException;
 
 public class BasicStat{
     public static void main(String[] args) {
-        // Create a Scanner and DecimalFormat to use in the program.
+        // Create a Scanner and DecimalFormat to use in the program.  DecimalFormat is used to make the output be in
+        // two decimals point.
         Scanner reader = new Scanner(System.in);
         DecimalFormat decimalF = new DecimalFormat("0.00");
 
@@ -44,12 +46,21 @@ public class BasicStat{
         if (numInput.isEmpty()) {
             System.out.println("Please input at least one number.");
         }
-        else {
-            // Convert each of the String input in numInputToStringArray to Double type and
-            // save it in Double type array numDoubleArray
-            for(int i = 0; i < numInputToStringArray.length; i++) {
-            numDoubleArray[i] = Double.parseDouble(numInputToStringArray[i]);
-        }
+        else { 
+            // Use try_catch to check if all the inputs are number.
+            try {
+                // Convert each of the String input in numInputToStringArray to Double type and
+                // save it in Double type array numDoubleArray
+                for(int i = 0; i < numInputToStringArray.length; i++) {
+                    numDoubleArray[i] = Double.parseDouble(numInputToStringArray[i]);
+                }
+            } catch (NumberFormatException e) {
+                // If all of the inputs aren't numbers.  Display the error message.
+                System.out.println("Inputs must be in numbers onlys.");
+                reader.close();
+                return;
+            }
+
             // Sorted the numbers in numDoubleArray.
             System.out.print("Sorted numbers are ");
             Arrays.sort(numDoubleArray);

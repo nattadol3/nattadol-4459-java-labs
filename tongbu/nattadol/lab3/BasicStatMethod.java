@@ -28,6 +28,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 import java.util.Arrays;
 import java.lang.Math;
+import java.lang.NumberFormatException;
 
 public class BasicStatMethod {
     public static void main(String[] args) {
@@ -60,11 +61,19 @@ public class BasicStatMethod {
             System.out.println("Please input at least one number.");
         }
         else {
-            // Convert each of the String input in numInputToStringArray to Double type and
-            // save it in Double type array numDoubleArray
-            for(int i = 0; i < numInputToStringArray.length; i++) {
-            numDoubleArray[i] = Double.parseDouble(numInputToStringArray[i]);
+            // Use try_catch to check if all the inputs are number.
+            try {
+                // Convert each of the String input in numInputToStringArray to Double type and
+                // save it in Double type array numDoubleArray
+                for(int i = 0; i < numInputToStringArray.length; i++) {
+                    numDoubleArray[i] = Double.parseDouble(numInputToStringArray[i]);
+                }
+            } catch (NumberFormatException e) {
+                // If all of the inputs aren't numbers.  Display the error message.
+                System.out.println("Inputs must be in numbers onlys.");
+                return;
             }
+
             // Sorted the numbers in numDoubleArray.
             System.out.print("Sorted numbers are ");
             Arrays.sort(numDoubleArray);
