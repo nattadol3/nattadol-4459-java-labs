@@ -21,7 +21,7 @@ package tongbu.nattadol.lab3;
 import java.util.Scanner; // Import Scanner to read the user input.
 import java.util.Random;
 
-public class SicBoMethods {
+public class SicBoMethod {
     static int choice; // Declare variable choice with static so its can be used across the program.
     static Scanner reader = new Scanner(System.in); // Create new Scanner with static so its can be use across the program.
     public static void main(String[] args) {
