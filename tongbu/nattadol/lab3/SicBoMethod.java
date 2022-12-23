@@ -78,32 +78,22 @@ public class SicBoMethod {
             int bettingNumber = Integer.parseInt(betting);
             if (bettingNumber <= 6 && bettingNumber >= 1) {
                 System.out.println("Dice 1 : " + die1 + ", Dice 2 : " + die2 + ", Dice 3 : " + die3);
+                
+                // These conditions is to check that, if user guess correctly.  How many dices they guess correctly and how much 
+                // they'll win.
                 if (bettingNumber == die1 && bettingNumber == die2 && bettingNumber == die3) {
                     System.out.println("You win 90 Bath.");
                 }
-                else if (bettingNumber == die1 && bettingNumber == die2) {
+                else if ((bettingNumber == die1 && bettingNumber == die2) || (bettingNumber == die1 && bettingNumber == die3) 
+                || (bettingNumber == die2 && bettingNumber == die3)) {
                     System.out.println("You win 60 Bath.");
                 }
-                else if (bettingNumber == die1 && bettingNumber == die3) {
-                    System.out.println("You win 60 Bath.");
-                }
-                else if (bettingNumber == die2 && bettingNumber == die3) {
-                    System.out.println("You win 60 Bath.");
-                }
-                else if (bettingNumber == die1) {
-                    System.out.println("You win 30 Bath.");
-                }
-                else if (bettingNumber == die2) {
-                    System.out.println("You win 30 Bath.");
-                }
-                else if (bettingNumber == die2) {
+                else if ((bettingNumber == die1) || (bettingNumber == die2) || (bettingNumber == die2)) {
                     System.out.println("You win 30 Bath.");
                 }
                 else {
                     System.out.println("You lose 10 Bath");
                 }
-                // These conditions is to check that, if user guess correctly.  How many dices they guess correctly and how much 
-                // they'll win.
             }
             else {
                 System.out.println("Incorrect Input. Enter a number between 1-6 only.");
