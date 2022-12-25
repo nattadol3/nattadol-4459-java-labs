@@ -20,7 +20,6 @@
 package tongbu.nattadol.lab3;
 
 import java.util.Scanner; // To import Scanner.  It's used to read the arguments that user input.
-import java.util.Random;
 
 public class SicBo {
     public static void main(String[] args) {
