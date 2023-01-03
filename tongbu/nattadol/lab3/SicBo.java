@@ -1,5 +1,5 @@
 /**
-* This SicBo program is a gamble game and it's to accept 3 arguments:  The first arguments is the game that user want to play
+* This SicBo program is a gamble game and it's to accept 2 arguments:  The first arguments is the game that user want to play
 * The first game is to guess the total value of 3 dices.  if total value is between 3-10 its count as low
 * if the total value is between 11-18 its count as high.  User will need to input h or H to guess high or l or L
 * to guess low.  If user guess correctly, they'll win 20 Bath.  If they guess incorrectly, they'll lose 10 Bath.
