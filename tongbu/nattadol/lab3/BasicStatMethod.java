@@ -60,6 +60,9 @@ public class BasicStatMethod {
         if (numInput.isEmpty()) {
             System.out.println("Please input at least one number.");
         }
+        else if (numInputToStringArray.length > 10) {
+            System.out.println("Number of inputs must not exeed 10");
+        }
         else {
             // Use try_catch to check if all the inputs are number.
             try {

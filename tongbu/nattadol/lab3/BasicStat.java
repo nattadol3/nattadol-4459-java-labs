@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.lang.Math;
 import java.lang.NumberFormatException;
 
-public class BasicStat{
+public class BasicStat {
     public static void main(String[] args) {
         // Create a Scanner and DecimalFormat to use in the program.  DecimalFormat is used to make the output be in
         // two decimals point.
@@ -45,6 +45,9 @@ public class BasicStat{
         // Check if there're no input from user, then display the error message.
         if (numInput.isEmpty()) {
             System.out.println("Please input at least one number.");
+        }
+        else if (numInputToStringArray.length > 10) {
+            System.out.println("Number of inputs must not exeed 10");
         }
         else { 
             // Use try_catch to check if all the inputs are number.
