@@ -52,7 +52,6 @@ public class SicBoMethod {
                     System.out.println("You win 20 Bath.");
                 }
                 else {
-                    System.out.println("Total is " + total);
                     System.out.println("You lose 10 Bath.");
                 }
             }
