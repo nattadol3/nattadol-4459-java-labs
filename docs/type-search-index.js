@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"tongbu.nattadol.lab4","l":"DisplayMatrix"},{"p":"tongbu.nattadol.lab4","l":"SicBoV2"},{"p":"tongbu.nattadol.lab4","l":"SicBoV3"},{"p":"tongbu.nattadol.lab4","l":"SicBoV4"}];updateSearchResults();
