@@ -50,7 +50,7 @@ public class DisplayMatrix {
      * @param matrix is the 2D array that have the width equal the value of rowDim and the height equal the value of colDim.  Then accept the values that user input to each index by row.
      */
 
-    static void inputMatrix() {
+    public static void inputMatrix() {
         Scanner reader = new Scanner(System.in);
         System.out.print("Enter the size of the matrix (number of rows then number of columns) : ");
 
@@ -70,7 +70,7 @@ public class DisplayMatrix {
      * <p>showMatrix method will display the matrix that user have input on the screen.</p>
      */
 
-    static void showMatrix() {
+    public static void showMatrix() {
         System.out.println("Show the original matrix : ");
         for (int i = 0; i < rowDim; i++) {
             for (int j = 0; j < colDim; j++) {
@@ -84,7 +84,7 @@ public class DisplayMatrix {
      * <p>showMatrixByRow() method will display each value of matrix starting from the top row and proceed from left to right in one line.</p>
      */
     
-    static void showMatrixByRow() {
+    public static void showMatrixByRow() {
         System.out.print("Show the matrix by row : ");
         for (int i = 0; i < rowDim; i++) {
             for (int j = 0; j < colDim; j++) {
@@ -98,7 +98,7 @@ public class DisplayMatrix {
      * <p>showMatrixByColumn() method will display each value of matrix by column starting form the first colunm and proceed from top to bottom in one line.</p>
      */
 
-    static void showMatrixByColumn() {
+    public static void showMatrixByColumn() {
         System.out.print("Show the matrix by column : ");
         for (int i = 0; i < colDim; i++) {
             for (int j = 0; j < rowDim; j++) {
@@ -112,7 +112,7 @@ public class DisplayMatrix {
      * <p>showMatrixByRowBackward() method will display each value of matrix starting from the bottom row and proceed from right to left in one line.</p>
      */
 
-    static void showMatrixByRowBackward() {
+    public static void showMatrixByRowBackward() {
         System.out.print("Show the matrix by row backward : ");
         for (int i = rowDim; i > 0; i--) {
             for (int j = colDim; j > 0; j--) {
@@ -126,7 +126,7 @@ public class DisplayMatrix {
      * <p>showMatrixByColumnBackward() method will display each value of matrix by column starting form the last colunm and proceed from bottom to top in one line.</p>
      */
     
-    static void showMatrixByColumnBackward() {
+    public static void showMatrixByColumnBackward() {
         System.out.print("Show the matrix by column backward : ");
         for (int i = colDim; i > 0; i--) {
             for (int j = rowDim; j > 0; j--) {
@@ -140,7 +140,7 @@ public class DisplayMatrix {
      * <p>showMatrixByDiagonalTopLeftBottomRight() method will display the values that are in the diagonal line of the matrix from top left to bottom right in one line.</p>
      */
 
-    static void showMatrixByDiagonalTopLeftBottomRight() {
+    public static void showMatrixByDiagonalTopLeftBottomRight() {
         System.out.print("Show the diagonal elements of the matrix from top-left to bottom-right : ");
         for (int i = 0; i < rowDim; i++) {
             for (int j = 0; j < colDim; j++) {
@@ -158,7 +158,7 @@ public class DisplayMatrix {
      * @param dummyColDim is to store the index value of the last column of the matrix to use in the for loop to start printing from the right most column to the left most column.
      */
 
-    static void showMatrixByDiagonalTopRightBottomleft() {
+    public static void showMatrixByDiagonalTopRightBottomleft() {
         System.out.print("Show the diagonal elements of the matrix from top-right to bottom-left : ");
         // dummyColDim variable that store the value of the right most column index of the matrix.
         int dummyColDim = (colDim - 1);
@@ -180,7 +180,7 @@ public class DisplayMatrix {
      * <p>(ex. if the 1st row is displayed form left to right, the 2nd will be displayed from right to left)</p>
      */
 
-    static void showMatrixByRowZigzag() {
+    public static void showMatrixByRowZigzag() {
         System.out.print("Show matrix by row zigzag : ");
         for (int i = 0; i < rowDim; i++) {
             if (i % 2 == 0) {
