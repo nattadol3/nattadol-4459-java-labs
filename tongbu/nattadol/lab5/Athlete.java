@@ -20,7 +20,7 @@ public class Athlete {
     protected double height;
 
     // Gender enum.  Contains the gender of the athlete which is MALE and FEMALE
-    protected enum Gender {
+    public enum Gender {
         MALE,
         FEMALE
     }
