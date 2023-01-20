@@ -24,7 +24,7 @@ public class Footballer extends Athlete {
             this.team = team;
     }
 
-    // These are the additional getter and setter methods of the Footbaler class.
+    // These are the additional getter and setter methods of the Footballer class.
     public String getSport() {
         return sport;
     }

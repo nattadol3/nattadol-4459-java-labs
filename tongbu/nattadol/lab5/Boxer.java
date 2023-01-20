@@ -13,7 +13,7 @@ public class Boxer extends Athlete {
     private String division;
     private String golveSize;
 
-    // Constructor of Footballer class.  Need division and golveSize to be pass in as an addition.
+    // Constructor of Boxer class.  Need division and golveSize to be pass in as an addition.
     public Boxer(String name, double weight, double height, Gender gender, String nationality,
         String birthDate, String division, String golveSize) {
 
