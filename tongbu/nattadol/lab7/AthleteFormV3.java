@@ -55,9 +55,9 @@ public class AthleteFormV3 extends AthleteFormV2 {
         fileMenu = new JMenu("File");
 
         // Creating icon for the New, Open, and Save menu.
-        newIcon = new ImageIcon("tongbu/nattadol/lab7/icons/New-icon.png");
-        openIcon = new ImageIcon("tongbu/nattadol/lab7/icons/Open-icon.png");
-        saveIcon = new ImageIcon("tongbu/nattadol/lab7/icons/Save-icon.png");
+        newIcon = new ImageIcon(getClass().getResource("icons/New-icon.png"));
+        openIcon = new ImageIcon(getClass().getResource("icons/Open-icon.png"));
+        saveIcon = new ImageIcon(getClass().getResource("icons/Save-icon.png"));
 
         // Creating JMenuitems to be add into fileMenu.  New, Open, and Save menu have icon while Exit does not.
         newItem = new JMenuItem("New", newIcon);
