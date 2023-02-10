@@ -46,6 +46,7 @@ public class AthleteFormV2 extends AthleteForm {
         msw.setFrameFeatures();
     }
 
+    @Override
     public void addComponents() {
 
         // Call the super class addComponent().

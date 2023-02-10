@@ -46,6 +46,7 @@ public class AthleteForm extends MySimpleWindow {
         msw.setFrameFeatures();
     }
 
+    @Override
     public void addComponents() {
 
         // Call the superclass addComponent().

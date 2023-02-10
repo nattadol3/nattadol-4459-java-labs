@@ -1,5 +1,6 @@
 /**
- * This MySimpleWindow program will create GUI title "My Simple Window".  The GUI has 3 buttons inside which labeled
+ * This MySimpleWindow program entends from the JFrame class.  it will create GUI title "My Simple Window".  
+ * The GUI has 3 buttons inside which labeled
  * (from left to right) Cancel, Reset, Submit.
  * 
  * Author: Nattadol Thongbu
@@ -42,6 +43,7 @@ public class MySimpleWindow extends JFrame {
     }
 
     public void setFrameFeatures() {
+        
         // Set the default close operetion to exit.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
