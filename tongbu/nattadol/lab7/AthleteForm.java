@@ -86,10 +86,10 @@ public class AthleteForm extends MySimpleWindow {
         rButtonPanel.add(femaleRButton);
 
         // Creating formPanel for all of the labels, text fields, and radio buttons.
-        formPanel = new JPanel(new GridLayout(6, 2, 15 ,15));
+        formPanel = new JPanel(new GridLayout(6, 2, 15 ,5)); // 15 - 5
 
         // Add empty border to formPanel.
-        formPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, -30, 10));
+        formPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 10)); // -30 to 0
 
         // Add each components into formPanel.
         formPanel.add(nameLabel);

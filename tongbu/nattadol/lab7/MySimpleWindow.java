@@ -55,6 +55,8 @@ public class MySimpleWindow extends JFrame {
 
         // Set the position of the frame to the center of the screen.
         setLocationRelativeTo(null);
+
+        //component
     }
 
     public void addComponents() {

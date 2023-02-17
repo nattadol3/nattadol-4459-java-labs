@@ -53,7 +53,7 @@ public class AthleteFormV2 extends AthleteForm {
         super.addComponents();
 
         // Set layout for formPanel to GridLayout.
-        formPanel.setLayout(new GridLayout(7, 2, 15, 15));
+        formPanel.setLayout(new GridLayout(7, 2, 15, 5)); // 15 - 5
 
         // Creating nessessary labels.
         nationnalityLabel = new JLabel("Nationality : ");
@@ -75,16 +75,16 @@ public class AthleteFormV2 extends AthleteForm {
         nationBox.setSelectedItem("Thai");
 
         // Creating centerPanel which has GridLayout.
-        centerPanel = new JPanel(new GridLayout(2, 1, 15, 15));
+        centerPanel = new JPanel(new GridLayout(2, 1, 15, 5)); // 15 - 5
 
         // Add empty border to centerPanel.
-        centerPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        centerPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 10)); // 10 - 0
 
         // Creating bioPanel which has BorderLayout.
         bioPanel = new JPanel(new BorderLayout());
 
         // Creating sportsPanel which has GridLayout.
-        sportsPanel = new JPanel(new GridLayout(1, 2, 15, 15));
+        sportsPanel = new JPanel(new GridLayout(1, 2, 15, 5)); // 15 - 5
 
         // Creating JList and add the sportsList String arrays to the list.
         sportJList = new JList<>(sportsList);
@@ -97,7 +97,7 @@ public class AthleteFormV2 extends AthleteForm {
         sportsPanel.add(sportJList);
 
         // Creating TextArea for bio.
-        bioTextArea = new JTextArea();
+        bioTextArea = new JTextArea(4, 2);
 
         // Set that if the sentences is longer than the text area.  The text is automatically put on the new line.
         bioTextArea.setLineWrap(true);
