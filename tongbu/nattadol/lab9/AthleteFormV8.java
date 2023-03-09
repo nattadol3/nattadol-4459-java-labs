@@ -271,16 +271,35 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
 
     protected void cancelFormValues() {
 
+        // Revert the form value back to the initial AthleteFormV6 state.
         // Clear all the text fields text.
         for (JTextField tf : textFieldsArrayList) {
             tf.setText("");
         }
 
+        for (Component c : hobbiesCheckBoxPanel.getComponents()) {
+            if (c instanceof JCheckBox) {
+
+                // Clear selection of each selected hobbies checkboxes.
+                ((JCheckBox) c).setSelected(false);
+            }
+        }
+
+        // Check the watching movies checkbox
+        watchMoviesCheckBox.setSelected(true);
+
+        
         // Clear the selection in gender radio button.
         genderBGroup.clearSelection();
 
         // Clear the bioTextArea text.
         bioTextArea.setText("");
+
+        // Set the nationality to Thai
+        nationBox.setSelectedItem("Thai");
+
+        // Set the sport selection to football.
+        sportJList.setSelectedIndex(2);
 
         // Set the experienceSlider value to 0.
         experienceSlider.setValue(0);
