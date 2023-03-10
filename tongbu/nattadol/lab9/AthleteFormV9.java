@@ -209,7 +209,7 @@ public class AthleteFormV9 extends AthleteFormV8 {
         }
     }
 
-    protected void setAcceleratorKeys() {
+    public void setAcceleratorKeys() {
         // Set the short cut keys for the menus in fileMenu.
         newItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_DOWN_MASK));
         openItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_DOWN_MASK));
@@ -217,7 +217,7 @@ public class AthleteFormV9 extends AthleteFormV8 {
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_DOWN_MASK));
     }
 
-    protected void setMnemonicKeys() {
+    public void setMnemonicKeys() {
         // Set the mnemonic keys for the menus in fileMenu.
         newItem.setMnemonic(KeyEvent.VK_N);
         openItem.setMnemonic(KeyEvent.VK_O);
