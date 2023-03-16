@@ -32,7 +32,7 @@
 
 package tongbu.nattadol.lab10;
 
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -286,19 +286,31 @@ public class AthleteFormV11 extends AthleteFormV10 {
             JOptionPane.showMessageDialog(null, "Athlete " + atheleteName + " is NOT found");
         } else {
 
+            // Boolean value to check if the name is found or not.
+            boolean nameFound = false;
+
             // Check for every athlete in the athleteArrList if the
             // input name is matched with any athlete.
             for (AthleteV2 ath : athleteArrList) {
                 if (atheleteName.equalsIgnoreCase(ath.getName())) {
 
-                    // Pop up message if the input name is match.
-                    JOptionPane.showMessageDialog(null, ath.toString());
-                } else {
-                    
-                    // Pop up message if input name is not match with any names in
-                    // the athleteArrList.
-                    JOptionPane.showMessageDialog(null, "Athlete " + atheleteName + " is NOT found");
+                    // If the name entered match with the name in the list.
+                    // Set the nameFound boolean to true.
+                    nameFound = true;
+                    atheleteName = ath.toString();
+                    break;                  
                 }
+            }
+
+            if (nameFound) {
+
+                // Pop up message if the input name does match with the name in the list.
+                JOptionPane.showMessageDialog(null, atheleteName + " is found");
+            } else {
+
+                // Pop up message if the input name doesn't not match with any names in
+                // the athleteArrList.
+                JOptionPane.showMessageDialog(null, "Athlete " + atheleteName + " is NOT found");
             }
         }
     }
