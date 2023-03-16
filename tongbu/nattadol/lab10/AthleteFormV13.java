@@ -152,7 +152,7 @@ public class AthleteFormV13 extends AthleteFormV12 {
         }
 
         // Check if the number value is more than or equal to the max value or less than or equal to 0.
-        if (tfValue >= maxValue) {
+        if (tfValue > maxValue) {
 
             // Pop up message in case of if the tfValue is more than or equal to maxValue.
             JOptionPane.showMessageDialog(null, tfName + " should be less than " + maxValue);
@@ -167,7 +167,7 @@ public class AthleteFormV13 extends AthleteFormV12 {
             // Change tfValue to -1 to represent that the number is not valid, then return it.
             tfValue = -1;
         }
-        
+
         return tfValue;
     }
 }
