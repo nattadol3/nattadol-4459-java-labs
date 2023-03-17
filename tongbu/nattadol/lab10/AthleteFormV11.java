@@ -279,35 +279,31 @@ public class AthleteFormV11 extends AthleteFormV10 {
         // String to accept input from the input dialog
         String atheleteName = JOptionPane.showInputDialog(null, "Please enter athlete name:");
 
-        // Check if athleteArrList is empty or not.
-        if (athleteArrList.isEmpty()) {
+        // Boolean value to check if the name is found or not.
+        boolean nameFound = false;
 
-            // Pop up message if there are no athlete in the athleteArrList
-            JOptionPane.showMessageDialog(null, "Athlete " + atheleteName + " is NOT found");
-        } else {
+        // Check for every athlete in the athleteArrList if the
+        // input name is matched with any athlete.
+        for (AthleteV2 ath : athleteArrList) {
+            if (atheleteName.equalsIgnoreCase(ath.getName())) {
 
-            // Boolean value to check if the name is found or not.
-            boolean nameFound = false;
-
-            // Check for every athlete in the athleteArrList if the
-            // input name is matched with any athlete.
-            for (AthleteV2 ath : athleteArrList) {
-                if (atheleteName.equalsIgnoreCase(ath.getName())) {
-
-                    // If the name entered match with the name in the list.
-                    // Set the nameFound boolean to true.
-                    nameFound = true;
-                    atheleteName = ath.toString();
-                    break;                  
-                }
+                // If the name entered match with the name in the list.
+                // Set the nameFound boolean to true.
+                nameFound = true;
+                atheleteName = ath.toString();
+                break;
             }
+        }
 
-            if (nameFound) {
+        if (nameFound) {
 
-                // Pop up message if the input name does match with the name in the list.
-                JOptionPane.showMessageDialog(null, atheleteName + " is found");
+            // Pop up message if the input name does match with the name in the list.
+            JOptionPane.showMessageDialog(null, atheleteName + " is found");
+        } else {
+            if (atheleteName == null) {
+
+                // Do nothing if user clicked cancel.
             } else {
-
                 // Pop up message if the input name doesn't not match with any names in
                 // the athleteArrList.
                 JOptionPane.showMessageDialog(null, "Athlete " + atheleteName + " is NOT found");
