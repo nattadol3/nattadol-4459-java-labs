@@ -137,10 +137,23 @@ public class AthleteFormV13 extends AthleteFormV12 {
         // Defalue value to return.
         double tfValue = 0;
 
+        // Get the String value from the text field.
+        String value = tf.getText();
+
+        // Check for the suffix of data type.  if there are suffix.  Change the value of
+        // tfValue to -1 then return it.
+        if (value.matches(".*[fFdD].*")) {
+            
+            // Message telling user that the number is invalid.
+            JOptionPane.showMessageDialog(null, "Please enter a valid number for " + tfName);
+            tfValue = -1;
+            return tfValue;
+        }
+
         // Use try catch to catch to catch the exception in case of the text in the weight and heigth text fields
         // is not a number.
         try {
-            tfValue = Double.parseDouble(tf.getText());
+            tfValue = Double.parseDouble(value);
         } catch (NumberFormatException e) {
 
             // Message in case if the program catch the exception.
