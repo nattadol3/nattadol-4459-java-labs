@@ -8,13 +8,14 @@
 
 package tongbu.nattadol.lab5;
 
+import java.io.Serializable;
 // Import LocalDate and DateTimeFormatter to use for ahtlete birthdate and  ChronoUnit to compare the age of athletes
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class Athlete {
-    protected DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+public class Athlete implements Serializable {
+    // protected DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     protected String name;
     protected double weight;
     protected double height;
@@ -36,6 +37,7 @@ public class Athlete {
         this.height = height;
         this.gender = gender;
         this.nationality = nationality;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.birthDate = LocalDate.parse(birthDate, formatter);
     }
 
@@ -80,9 +82,9 @@ public class Athlete {
         return nationality;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = LocalDate.parse(birthDate, formatter);
-    }
+    // public void setBirthDate(String birthDate) {
+    //     this.birthDate = LocalDate.parse(birthDate, formatter);
+    // }
 
     public LocalDate getBirthDate() {
         return birthDate;
